@@ -25,24 +25,24 @@ export default function App(){
             
     },[resetQuiz])
     function shuffle(originalArray) {
-        let array = [].concat(originalArray);
-        let currentIndex = array.length, temporaryValue, randomIndex;
+        let array = originalArray
+        let currentIndex = array.length, temporaryValue, randomIndex
       
 
         if(0 !== currentIndex) {
       
 
-          randomIndex = Math.floor(Math.random() * currentIndex);
-          currentIndex -= 1;
+          randomIndex = Math.floor(Math.random() * currentIndex)
+          currentIndex -= 1
       
-          temporaryValue = array[currentIndex];
+
+          temporaryValue = array[currentIndex]
           array[currentIndex] = array[randomIndex];
-          array[randomIndex] = temporaryValue;
+          array[randomIndex] = temporaryValue
         }
       
-        return array;
-      }
-
+        return array
+    }
     function selectAnswer(id,answer){
         if(!quizOver){
         setQuestions(prevState => prevState.map(item => {
