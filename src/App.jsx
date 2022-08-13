@@ -26,10 +26,12 @@ export default function App(){
     },[resetQuiz])
     function shuffle(originalArray) {
         let array = originalArray
-        let currentIndex = array.length, temporaryValue, randomIndex
+        let currentIndex = array.length
+        let temporaryValue
+        let randomIndex
       
 
-        if(0 !== currentIndex) {
+        while(0 !== currentIndex) {
       
 
           randomIndex = Math.floor(Math.random() * currentIndex)
@@ -37,7 +39,7 @@ export default function App(){
       
 
           temporaryValue = array[currentIndex]
-          array[currentIndex] = array[randomIndex];
+          array[currentIndex] = array[randomIndex]
           array[randomIndex] = temporaryValue
         }
       
