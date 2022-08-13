@@ -31,7 +31,7 @@ export default function App(){
         let randomIndex
       
 
-        while(0 !== currentIndex) {
+        if(0 !== currentIndex) {
       
 
           randomIndex = Math.floor(Math.random() * currentIndex)
