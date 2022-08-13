@@ -29,21 +29,20 @@ export default function App(){
         let currentIndex = array.length
         let temporaryValue
         let randomIndex
-      
+        
+        if(0 !== currentIndex) {
 
 
-      
+        randomIndex = Math.floor(Math.random() * currentIndex)
+        currentIndex -= 1
 
-       randomIndex = Math.floor(Math.random() * currentIndex)
-       currentIndex -= 1
-      
 
         temporaryValue = array[currentIndex]
         array[currentIndex] = array[randomIndex]
-         array[randomIndex] = temporaryValue
+        array[randomIndex] = temporaryValue
+        }
 
-      
-        return array
+       return array
     }
     function selectAnswer(id,answer){
         if(!quizOver){
