@@ -38,7 +38,7 @@ export default function App(){
         ))
     }
     }
-    console.log(questions)
+
     const questionElements = questions.map((item,index) => <Question 
         quizQuestion = {item}
         key = {item.id}
