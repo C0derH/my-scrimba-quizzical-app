@@ -19,11 +19,29 @@ export default function App(){
             .then(data => setQuestions(data.results.map((item, index) => ({
                 ...item,
                 selectedAnswer : "",
-                answers : [...item.incorrect_answers, item.correct_answer],
+                answers : shuffle([...item.incorrect_answers, item.correct_answer]),
                 id : nanoid()
             }))))
+            
     },[resetQuiz])
+    function shuffle(originalArray) {
+        var array = [].concat(originalArray);
+        var currentIndex = array.length, temporaryValue, randomIndex;
+      
 
+        if(0 !== currentIndex) {
+      
+
+          randomIndex = Math.floor(Math.random() * currentIndex);
+          currentIndex -= 1;
+      
+          temporaryValue = array[currentIndex];
+          array[currentIndex] = array[randomIndex];
+          array[randomIndex] = temporaryValue;
+        }
+      
+        return array;
+      }
 
     function selectAnswer(id,answer){
         if(!quizOver){

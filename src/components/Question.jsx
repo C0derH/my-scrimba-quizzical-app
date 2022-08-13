@@ -14,7 +14,9 @@ export default function Question(props){
         isQuizOver = {props.isQuizOver}
         />
     } )
-       
+
+
+
     return(
         <div className = "question">
             <h1>{props.quizQuestion.question.replace(/&quot;/g, '').replace(/&#039;/g,'').replace(/&/g,'').replace(/acute;/g,'')}</h1>
