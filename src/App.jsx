@@ -25,8 +25,8 @@ export default function App(){
             
     },[resetQuiz])
     function shuffle(originalArray) {
-        var array = [].concat(originalArray);
-        var currentIndex = array.length, temporaryValue, randomIndex;
+        let array = [].concat(originalArray);
+        let currentIndex = array.length, temporaryValue, randomIndex;
       
 
         if(0 !== currentIndex) {
